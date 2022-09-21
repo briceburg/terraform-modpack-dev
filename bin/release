@@ -16,8 +16,9 @@ git remote set-url remote "$release_remote" 2>/dev/null || git remote add remote
 
 echo -e "release ${1} to:\n  $release_remote\n" >&2
 read -rp "(y/n)?" choice
+# shellcheck disable=SC2086
 case "$choice" in 
-  y|Y ) git push remote "$ref:refs/tags/$1" ;;
+  y|Y ) git push $RELEASE_PUSH_FLAGS remote "$ref:refs/tags/$1" ;;
   * ) echo "skipped"; exit 2 ;;
 esac
 

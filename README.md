@@ -16,3 +16,8 @@ develop and release known working sets of modules (aka a "modpack") under a sing
     ```sh
     bin/release 0.0.0-alphaAardvark
     ```
+
+    ```sh
+    # alternatively, to overwrite an existing tag;
+    RELEASE_PUSH_FLAGS="--force" bin/release 0.0.0-alphaAardvark
+    ```
