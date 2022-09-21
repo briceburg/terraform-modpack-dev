@@ -21,3 +21,19 @@ develop and release a known working set of modules (aka a "modpack") to a [terra
     # alternatively, to overwrite an existing tag;
     RELEASE_PUSH_FLAGS="--force" bin/release 0.0.0-alphaAardvark
     ```
+
+### example modpack usage
+
+after release, reference modules within the modpack-release repository using [sub-directory notation](https://www.terraform.io/language/modules/sources#modules-in-package-sub-directories);
+
+```terraform
+
+module "larry" {
+    source = "github.com/briceburg/terraform-modpack-release.git//larry?ref=0.0.0-alphaAardvark"
+}
+
+output "foo" {
+    value = module.larry.info
+}
+...
+```
