@@ -1,17 +1,9 @@
 module "larry" {
-    source = "../../modules/larry"
+    source = "github.com/briceburg/terraform-modpack-release.git//larry?ref=0.0.0-alphaAardvark"
 }
 
-module "curly" {
-    source = "../../modules/curly"
-}
-
-module "moe" {
-    source = "../../modules/moe"
-}
-
-resource "test_assertions" "stooges" {
-  component = "stooges"
+resource "test_assertions" "stooges-release" {
+  component = "stooges-release"
 
   check "larry_amazes_moe" {
     description = "evaluate output of larry module. ensure moe looks amazed."
