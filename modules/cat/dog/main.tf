@@ -1,0 +1,3 @@
+module "moe" {
+    source = "../../moe"
+}
