@@ -1,6 +1,6 @@
 # terraform-modpack-dev
 
-develop and release known working sets of modules (aka a "modpack") under a single version. 
+develop and release a known working set of modules (aka a "modpack") to a [terraform-modpack-release](https://github.com/briceburg/terraform-modpack-release) repository.
 
 ## usage
 
